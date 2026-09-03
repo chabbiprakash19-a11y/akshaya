@@ -1,0 +1,2406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doctor Consultations | Sri Spectra Diagnostics & Clinic</title>
+
+    <link rel="stylesheet" href="doctor-consultations.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        /* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f4faf7;
+    color: #173e3a;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.doctor-hero {
+
+    min-height: 650px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+.doctor-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2000&q=90");
+
+    background-size: cover;
+
+    background-position: center;
+
+    z-index: -2;
+}
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2,57,51,.97),
+            rgba(2,76,68,.76),
+            rgba(2,63,57,.25)
+        );
+
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.clinic-name {
+
+    display: block;
+
+    color: #bcebd7;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.service-badge {
+
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.10);
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    font-size: 9px;
+
+    margin-bottom: 22px;
+}
+
+.hero-content h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(50px, 7vw, 82px);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+
+    display: block;
+
+    color: #b8ead5;
+}
+
+.hero-content p {
+
+    max-width: 620px;
+
+    color: #d7e9e4;
+
+    font-size: 15px;
+}
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+
+    padding: 14px 23px;
+
+    border-radius: 30px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+.primary-btn {
+
+    background: #c9eedc;
+
+    color: #087269;
+}
+
+.primary-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.2);
+}
+
+.secondary-btn {
+
+    border: 1px solid rgba(255,255,255,.45);
+
+    color: white;
+}
+
+.secondary-btn:hover {
+
+    background: white;
+
+    color: #087269;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro-section {
+
+    padding: 100px 0;
+
+    background: white;
+}
+
+.intro-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.intro-image {
+
+    height: 550px;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.intro-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.glass-card {
+
+    position: absolute;
+
+    left: 25px;
+
+    bottom: 25px;
+
+    padding: 16px 19px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,.92);
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.16);
+}
+
+.glass-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #def3e9;
+
+    font-size: 20px;
+}
+
+.glass-card strong {
+
+    display: block;
+
+    font-size: 11px;
+}
+
+.glass-card small {
+
+    display: block;
+
+    color: #778b86;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+.eyebrow {
+
+    display: inline-block;
+
+    color: #14786e;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    margin-bottom: 14px;
+}
+
+.intro-content h2,
+.section-heading h2,
+.why-content h2,
+.appointment-info h2,
+.location-box h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(39px, 5vw, 58px);
+
+    line-height: 1.08;
+
+    margin-bottom: 18px;
+}
+
+.intro-content h2 strong,
+.section-heading h2 strong,
+.why-content h2 strong,
+.appointment-info h2 strong,
+.location-box h2 strong {
+
+    color: #14786e;
+}
+
+.intro-content > p {
+
+    color: #71837f;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.feature-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 27px;
+}
+
+.feature {
+
+    display: flex;
+
+    gap: 10px;
+
+    padding: 14px;
+
+    border-radius: 13px;
+
+    background: #f4f9f7;
+
+    border: 1px solid #e1ece8;
+
+    transition: .3s;
+}
+
+.feature:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(12,76,67,.08);
+}
+
+.feature-icon {
+
+    width: 36px;
+
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #ddf2e8;
+}
+
+.feature h3 {
+
+    font-size: 11px;
+
+    margin-bottom: 3px;
+}
+
+.feature p {
+
+    color: #788b86;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services-section {
+
+    padding: 100px 0;
+
+    background: #f2f9f6;
+}
+
+.section-heading {
+
+    max-width: 680px;
+
+    margin-bottom: 45px;
+}
+
+.section-heading p {
+
+    color: #71837f;
+
+    font-size: 12px;
+}
+
+.section-heading.center {
+
+    text-align: center;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+.service-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.service-card {
+
+    background: white;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    border: 1px solid #dfebe6;
+
+    transition: .35s;
+}
+
+.service-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 25px 50px rgba(12,76,67,.12);
+}
+
+.service-image {
+
+    height: 280px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.service-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+.service-card:hover .service-image img {
+
+    transform: scale(1.05);
+}
+
+.service-tag {
+
+    position: absolute;
+
+    left: 20px;
+
+    bottom: 20px;
+
+    padding: 7px 13px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.9);
+
+    -webkit-backdrop-filter: blur(10px);
+     backdrop-filter: blur(10px);
+
+    color: #14786e;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.service-content {
+
+    padding: 30px;
+
+    position: relative;
+}
+
+.service-number {
+
+    position: absolute;
+
+    right: 25px;
+
+    top: 27px;
+
+    color: #c1cfca;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.service-content h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+    margin-bottom: 10px;
+}
+
+.service-content > p {
+
+    color: #71837f;
+
+    font-size: 10px;
+
+    margin-bottom: 18px;
+}
+
+.service-content ul {
+
+    list-style: none;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+}
+
+.service-content li {
+
+    color: #5d7670;
+
+    font-size: 9px;
+}
+
+.service-content a {
+
+    color: #14786e;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   PROCESS
+========================================= */
+
+.process-section {
+
+    padding: 100px 0;
+
+    background: white;
+}
+
+.process-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.process-card {
+
+    position: relative;
+
+    padding: 30px 22px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    background: #f5faf8;
+
+    border: 1px solid #dfebe6;
+
+    transition: .3s;
+}
+
+.process-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(12,76,67,.08);
+}
+
+.process-number {
+
+    position: absolute;
+
+    right: 17px;
+
+    top: 14px;
+
+    color: #c2d2cd;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.process-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #def2e8;
+
+    font-size: 24px;
+}
+
+.process-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+
+    margin-bottom: 7px;
+}
+
+.process-card p {
+
+    color: #71837f;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   WHY
+========================================= */
+
+.why-section {
+
+    padding: 100px 0;
+
+    background: #f2f9f6;
+}
+
+.why-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.why-content > p {
+
+    color: #71837f;
+
+    font-size: 13px;
+
+    margin-bottom: 30px;
+}
+
+.why-list {
+
+    display: grid;
+
+    gap: 20px;
+}
+
+.why-item {
+
+    display: flex;
+
+    gap: 15px;
+}
+
+.why-item > span {
+
+    width: 38px;
+
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #def2e8;
+
+    color: #14786e;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.why-item h3 {
+
+    font-size: 11px;
+
+    margin-bottom: 3px;
+}
+
+.why-item p {
+
+    color: #71837f;
+
+    font-size: 9px;
+}
+
+.why-image {
+
+    height: 540px;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.why-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.experience-card {
+
+    position: absolute;
+
+    left: 25px;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    padding: 20px;
+
+    border-radius: 16px;
+
+    background: rgba(4,71,65,.88);
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    color: white;
+}
+
+.experience-card strong {
+
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+}
+
+.experience-card span {
+
+    color: #c7dfd9;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   APPOINTMENT
+========================================= */
+
+.appointment-section {
+
+    padding: 100px 0;
+
+    background: #07574f;
+
+    color: white;
+}
+
+.appointment-grid {
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.appointment-info .eyebrow {
+
+    color: #b7e9d2;
+}
+
+.appointment-info h2 {
+
+    color: white;
+}
+
+.appointment-info h2 strong {
+
+    color: #b9ead5;
+}
+
+.appointment-info > p {
+
+    color: #c7ded9;
+
+    font-size: 13px;
+}
+
+.contact-info {
+
+    margin-top: 28px;
+}
+
+.contact-info p {
+
+    color: #c8dfd9;
+
+    font-size: 11px;
+
+    margin: 9px 0;
+}
+
+.appointment-form {
+
+    padding: 32px;
+
+    border-radius: 22px;
+
+    background: white;
+
+    color: #173e3a;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.12);
+}
+
+.appointment-form h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+    margin-bottom: 20px;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #dce8e4;
+
+    border-radius: 8px;
+
+    background: #fafcfb;
+
+    outline: none;
+
+    font-size: 10px;
+
+    font-family: inherit;
+}
+
+.appointment-form textarea {
+
+    resize: vertical;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus {
+
+    border-color: #14786e;
+
+    box-shadow:
+        0 0 0 3px rgba(20,120,110,.08);
+}
+
+.appointment-form button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #14786e;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.appointment-form small {
+
+    display: block;
+
+    text-align: center;
+
+    color: #82938f;
+
+    font-size: 8px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   LOCATION
+========================================= */
+
+.location-section {
+
+    padding: 100px 0;
+
+    background: white;
+}
+
+.location-box {
+
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    gap: 60px;
+
+    padding: 55px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #e8f6ef,
+            #f5fbf8
+        );
+
+    border: 1px solid #dcebe5;
+}
+
+.location-box p {
+
+    color: #71837f;
+
+    font-size: 11px;
+
+    max-width: 500px;
+
+    margin-bottom: 20px;
+}
+
+.map-button {
+
+    display: inline-block;
+
+    padding: 12px 19px;
+
+    border-radius: 30px;
+
+    background: #14786e;
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.hours {
+
+    padding: 25px;
+
+    border-radius: 17px;
+
+    background: rgba(255,255,255,.72);
+
+    border: 1px solid #dcebe5;
+}
+
+.hours h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+
+    margin-bottom: 18px;
+}
+
+.hours div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border-bottom: 1px solid #e2ebe8;
+
+    padding: 10px 0;
+
+    color: #71837f;
+
+    font-size: 9px;
+}
+
+.hours strong {
+
+    color: #14786e;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    padding-top: 45px;
+
+    background: #043e3a;
+
+    color: white;
+}
+
+.footer-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding-bottom: 35px;
+}
+
+.footer-top h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+}
+
+.footer-top p {
+
+    color: #aec8c2;
+
+    font-size: 9px;
+
+    margin-top: 5px;
+}
+
+.footer-bottom {
+
+    padding: 18px 0;
+
+    border-top: 1px solid rgba(255,255,255,.1);
+
+    color: #829e98;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   WHATSAPP
+========================================= */
+
+.whatsapp {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #25d366;
+
+    color: white;
+
+    font-size: 23px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.20);
+
+    z-index: 999;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .intro-grid,
+    .why-grid,
+    .appointment-grid,
+    .location-box {
+
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+
+        width: 90%;
+    }
+
+    .doctor-hero {
+
+        min-height: 650px;
+    }
+
+    .hero-content h1 {
+
+        font-size: 48px;
+    }
+
+    .hero-content p {
+
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+
+        text-align: center;
+    }
+
+    .intro-section,
+    .services-section,
+    .process-section,
+    .why-section,
+    .appointment-section,
+    .location-section {
+
+        padding: 70px 0;
+    }
+
+    .intro-image,
+    .why-image {
+
+        height: 390px;
+    }
+
+    .feature-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .service-image {
+
+        height: 230px;
+    }
+
+    .service-content ul {
+
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .location-box {
+
+        padding: 28px;
+
+        gap: 30px;
+    }
+
+    .footer-top {
+
+        flex-direction: column;
+    }
+
+    .whatsapp {
+
+        width: 48px;
+
+        height: 48px;
+
+        right: 15px;
+
+        bottom: 15px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .hero-content h1 {
+
+        font-size: 42px;
+    }
+
+    .intro-content h2,
+    .section-heading h2,
+    .why-content h2,
+    .appointment-info h2,
+    .location-box h2 {
+
+        font-size: 36px;
+    }
+
+}
+    </style>
+
+
+<!-- =========================================
+     HERO SECTION
+========================================= -->
+
+<section class="doctor-hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="clinic-name">
+                SRI SPECTRA DIAGNOSTICS & CLINIC
+            </span>
+
+            <span class="service-badge">
+                ✦ DOCTOR CONSULTATIONS
+            </span>
+
+            <h1>
+                Healthcare
+                <span>with a human touch.</span>
+            </h1>
+
+            <p>
+                Get professional medical guidance in a
+                comfortable and patient-friendly environment
+                at our clinic in Akshaya Nagar, Bangalore.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#appointment" class="primary-btn">
+                    Book Consultation →
+                </a>
+
+                <a href="tel:9986677662" class="secondary-btn">
+                    📞 Call Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     INTRODUCTION
+========================================= -->
+
+<section class="intro-section">
+
+    <div class="container intro-grid">
+
+
+        <!-- IMAGE -->
+
+        <div class="intro-image">
+
+            <img
+                src="img5.jpg"
+                alt="Doctor consultation">
+
+            <div class="glass-card">
+
+                <div class="glass-icon">
+                    👨‍⚕️
+                </div>
+
+                <div>
+
+                    <strong>
+                        Doctor Consultation
+                    </strong>
+
+                    <small>
+                        Personalised medical guidance
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="intro-content">
+
+            <span class="eyebrow">
+                MEDICAL CONSULTATION
+            </span>
+
+            <h2>
+                Talk to a doctor.
+                <strong>Understand your health.</strong>
+            </h2>
+
+            <p>
+                A doctor consultation gives you an opportunity
+                to discuss your health concerns, symptoms,
+                medical history and questions with a qualified
+                healthcare professional.
+            </p>
+
+            <p>
+                Our clinic aims to provide a comfortable
+                environment where patients can discuss their
+                concerns and understand the next appropriate
+                steps.
+            </p>
+
+
+            <div class="feature-grid">
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🩺
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Health Assessment
+                        </h3>
+
+                        <p>
+                            Discuss your health concerns
+                            during a consultation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        📋
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Medical History
+                        </h3>
+
+                        <p>
+                            Review relevant symptoms and
+                            previous medical information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🔬
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Test Guidance
+                        </h3>
+
+                        <p>
+                            Discuss diagnostic tests when
+                            clinically appropriate.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        ❤️
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Follow-Up Care
+                        </h3>
+
+                        <p>
+                            Continue care according to
+                            your doctor's advice.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CONSULTATION SERVICES
+========================================= -->
+
+<section class="services-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                CONSULTATION SERVICES
+            </span>
+
+            <h2>
+                Medical guidance for
+                <strong>your everyday health.</strong>
+            </h2>
+
+            <p>
+                Consult with our healthcare team regarding
+                common health concerns and medical needs.
+            </p>
+
+        </div>
+
+
+
+        <div class="service-grid">
+
+
+            <!-- CARD 01 -->
+
+            <div class="service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=1000&q=85"
+                        alt="General physician consultation">
+
+                    <span class="service-tag">
+                        GENERAL CARE
+                    </span>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <span class="service-number">
+                        01
+                    </span>
+
+                    <h3>
+                        General Consultation
+                    </h3>
+
+                    <p>
+                        Consultation for common health
+                        concerns, symptoms and general
+                        medical guidance.
+                    </p>
+
+                    <ul>
+
+                        <li>✓ General health concerns</li>
+
+                        <li>✓ Fever & infections</li>
+
+                        <li>✓ Common symptoms</li>
+
+                        <li>✓ Health advice</li>
+
+                    </ul>
+
+                    <a href="#appointment">
+                        Book Consultation →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 02 -->
+
+            <div class="service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1000&q=85"
+                        alt="Preventive health consultation">
+
+                    <span class="service-tag">
+                        PREVENTIVE CARE
+                    </span>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <span class="service-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Preventive Health
+                    </h3>
+
+                    <p>
+                        Discuss preventive health needs,
+                        routine checkups and healthy
+                        lifestyle practices.
+                    </p>
+
+                    <ul>
+
+                        <li>✓ Routine health review</li>
+
+                        <li>✓ Lifestyle guidance</li>
+
+                        <li>✓ Health screening</li>
+
+                        <li>✓ Preventive advice</li>
+
+                    </ul>
+
+                    <a href="#appointment">
+                        Book Consultation →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 03 -->
+
+            <div class="service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="img5.jpg"
+                        alt="Chronic health consultation">
+
+                    <span class="service-tag">
+                        FOLLOW-UP
+                    </span>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <span class="service-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Follow-Up Consultation
+                    </h3>
+
+                    <p>
+                        Follow-up discussions based on your
+                        existing treatment, reports or
+                        doctor's recommendations.
+                    </p>
+
+                    <ul>
+
+                        <li>✓ Review of reports</li>
+
+                        <li>✓ Treatment follow-up</li>
+
+                        <li>✓ Health progress</li>
+
+                        <li>✓ Medical guidance</li>
+
+                    </ul>
+
+                    <a href="#appointment">
+                        Book Consultation →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 04 -->
+
+            <div class="service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="img0.jpg"
+                        alt="Diagnostic consultation">
+
+                    <span class="service-tag">
+                        DIAGNOSTICS
+                    </span>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <span class="service-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Test & Report Guidance
+                    </h3>
+
+                    <p>
+                        Discuss your diagnostic reports and
+                        understand what questions you may
+                        need to discuss with your doctor.
+                    </p>
+
+                    <ul>
+
+                        <li>✓ Lab report discussion</li>
+
+                        <li>✓ Imaging report guidance</li>
+
+                        <li>✓ Test recommendations</li>
+
+                        <li>✓ Follow-up planning</li>
+
+                    </ul>
+
+                    <a href="#appointment">
+                        Book Consultation →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CONSULTATION PROCESS
+========================================= -->
+
+<section class="process-section">
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+            <span class="eyebrow">
+                HOW IT WORKS
+            </span>
+
+            <h2>
+                Your consultation,
+                <strong>made simple.</strong>
+            </h2>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+            <div class="process-card">
+
+                <span class="process-number">
+                    01
+                </span>
+
+                <div class="process-icon">
+                    📅
+                </div>
+
+                <h3>
+                    Book
+                </h3>
+
+                <p>
+                    Request a consultation through our
+                    appointment form or by phone.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span class="process-number">
+                    02
+                </span>
+
+                <div class="process-icon">
+                    🩺
+                </div>
+
+                <h3>
+                    Consult
+                </h3>
+
+                <p>
+                    Discuss your symptoms, concerns and
+                    relevant medical history.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span class="process-number">
+                    03
+                </span>
+
+                <div class="process-icon">
+                    📋
+                </div>
+
+                <h3>
+                    Understand
+                </h3>
+
+                <p>
+                    Receive appropriate guidance regarding
+                    the next steps in your care.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span class="process-number">
+                    04
+                </span>
+
+                <div class="process-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Follow Up
+                </h3>
+
+                <p>
+                    Continue your healthcare journey with
+                    appropriate follow-up.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     WHY CHOOSE US
+========================================= -->
+
+<section class="why-section">
+
+    <div class="container why-grid">
+
+
+        <div class="why-content">
+
+            <span class="eyebrow">
+                PATIENT-CENTRIC CARE
+            </span>
+
+            <h2>
+                More than a consultation.
+                <strong>A conversation about your health.</strong>
+            </h2>
+
+            <p>
+                We believe good healthcare starts with
+                listening. Our clinic provides a welcoming
+                environment where patients can discuss their
+                health concerns openly.
+            </p>
+
+
+            <div class="why-list">
+
+
+                <div class="why-item">
+
+                    <span>
+                        01
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Patient-Friendly Approach
+                        </h3>
+
+                        <p>
+                            We aim to make every consultation
+                            comfortable and easy to understand.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <span>
+                        02
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Convenient Location
+                        </h3>
+
+                        <p>
+                            Easily accessible in Akshaya Nagar,
+                            Bangalore.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <span>
+                        03
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Integrated Diagnostics
+                        </h3>
+
+                        <p>
+                            Diagnostic services are available
+                            at the same centre.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <span>
+                        04
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Convenient Appointments
+                        </h3>
+
+                        <p>
+                            Contact us to find a suitable
+                            consultation time.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="why-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1638202993928-7d113d8a6b4f?auto=format&fit=crop&w=1200&q=85"
+                alt="Doctor speaking with patient">
+
+            <div class="experience-card">
+
+                <strong>
+                    Sri Spectra
+                </strong>
+
+                <span>
+                    Diagnostics & Clinic
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     APPOINTMENT SECTION
+========================================= -->
+
+<section class="appointment-section" id="appointment">
+
+    <div class="container appointment-grid">
+
+
+        <div class="appointment-info">
+
+            <span class="eyebrow">
+                BOOK A CONSULTATION
+            </span>
+
+            <h2>
+                Your health deserves
+                <strong>the right conversation.</strong>
+            </h2>
+
+            <p>
+                Request an appointment with our clinic.
+                Our team will contact you to confirm
+                availability and consultation details.
+            </p>
+
+
+            <div class="contact-info">
+
+                <p>
+                    📞 99866 77662
+                </p>
+
+                <p>
+                    📞 99866 77663
+                </p>
+
+                <p>
+                    📍 Akshaya Nagar, Bangalore
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <form class="appointment-form">
+
+            <h3>
+                Book Doctor Consultation
+            </h3>
+
+
+            <input
+                type="text"
+                placeholder="Full Name"
+                required>
+
+
+            <input
+                type="tel"
+                placeholder="Mobile Number"
+                required>
+
+
+            <label for="preferredTime">Preferred Time</label>
+
+<select id="preferredTime" name="preferredTime">
+    <option value="">Select time</option>
+    <option value="morning">Morning</option>
+    <option value="afternoon">Afternoon</option>
+    <option value="evening">Evening</option>
+</select>
+
+
+            <label for="preferredDate">
+    Preferred Date
+</label>
+
+<input
+    type="date"
+    id="preferredDate"
+    name="preferredDate"
+    required>
+
+
+            <textarea
+                rows="4"
+                placeholder="Briefly describe your concern">
+            </textarea>
+
+
+            <button type="submit">
+                Request Appointment →
+            </button>
+
+
+            <small>
+                Our team will contact you to confirm
+                your appointment.
+            </small>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     LOCATION
+========================================= -->
+
+<section class="location-section">
+
+    <div class="container location-box">
+
+
+        <div>
+
+            <span class="eyebrow">
+                VISIT OUR CLINIC
+            </span>
+
+            <h2>
+                Sri Spectra
+                <strong>Diagnostics & Clinic</strong>
+            </h2>
+
+            <p>
+                Ganapathi Complex, 2nd Main,
+                Akshaya Nagar, 50 Ft Road,
+                Near DLF Town, Yelenahalli,
+                Bangalore – 560068
+            </p>
+
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Sri+Spectra+Diagnostics+Akshaya+Nagar+Bangalore"
+                target="_blank"
+                 rel="noopener noreferrer"
+                class="map-button">
+
+                Open Google Maps →
+
+            </a>
+
+        </div>
+
+
+
+        <div class="hours">
+
+            <h3>
+                Opening Hours
+            </h3>
+
+
+            <div>
+
+                <span>
+                    Monday – Saturday
+                </span>
+
+                <strong>
+                    7 AM – 10 PM
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Sunday
+                </span>
+
+                <strong>
+                    7 AM – 2 PM
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Sunday Evening
+                </span>
+
+                <strong>
+                    5 PM – 10 PM
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-top">
+
+
+            <div>
+
+                <h3>
+                    Sri Spectra
+                </h3>
+
+                <p>
+                    Diagnostics & Clinic
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <p>
+                    Akshaya Nagar, Bangalore
+                </p>
+
+                <p>
+                    99866 77662 | 99866 77663
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 Sri Spectra Diagnostics & Clinic.
+            All rights reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     WHATSAPP BUTTON
+========================================= -->
+
+<a
+    href="https://wa.me/919986677662"
+    target="_blank"
+     rel="noopener noreferrer"
+    class="whatsapp">
+
+    💬
+
+</a>
+
+
+</body>
+</html>

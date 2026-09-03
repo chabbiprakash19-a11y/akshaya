@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thyroid Test | Sri Spectra Diagnostics</title>
+
+    <link rel="stylesheet" href="thyroid-test.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        /* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f3faf7;
+    color: #173e3a;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=2000&q=90");
+
+    background-size: cover;
+    background-position: center;
+
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2, 58, 52, .97),
+            rgba(3, 82, 74, .78),
+            rgba(3, 70, 63, .25)
+        );
+
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.clinic-name {
+    display: block;
+
+    color: #bcebd7;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.10);
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    -webkit-backdrop-filter: blur(10px);
+     backdrop-filter: blur(10px);
+
+    font-size: 9px;
+
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 7vw, 80px);
+
+    line-height: 1.02;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #b8ead5;
+}
+
+.hero p {
+    max-width: 620px;
+
+    color: #d7e9e4;
+
+    font-size: 15px;
+}
+
+.buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 14px 23px;
+
+    border-radius: 30px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+.primary-btn {
+    background: #c9eedc;
+
+    color: #087269;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.2);
+}
+
+.secondary-btn {
+    border: 1px solid rgba(255,255,255,.45);
+
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: white;
+
+    color: #087269;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    padding: 100px 0;
+
+    background: white;
+}
+
+.intro-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.image-box {
+    height: 550px;
+
+    position: relative;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+}
+
+.image-box img {
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.glass-card {
+    position: absolute;
+
+    left: 25px;
+    bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 16px 19px;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,.90);
+
+    -webkit-backdrop-filter: blur(10px);
+     backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.16);
+}
+
+.icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #def3e9;
+
+    font-size: 20px;
+}
+
+.glass-card strong {
+    display: block;
+
+    font-size: 11px;
+}
+
+.glass-card small {
+    display: block;
+
+    color: #778b86;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+.eyebrow {
+    display: inline-block;
+
+    color: #14786e;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    margin-bottom: 14px;
+}
+
+.content h2,
+.heading h2,
+.symptom-content h2,
+.why-content h2,
+.appointment-info h2,
+.location-box h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(38px, 5vw, 57px);
+
+    line-height: 1.08;
+
+    margin-bottom: 18px;
+}
+
+.content h2 strong,
+.heading h2 strong,
+.symptom-content h2 strong,
+.why-content h2 strong,
+.appointment-info h2 strong,
+.location-box h2 strong {
+
+    color: #14786e;
+}
+
+.content > p {
+    color: #71837f;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.stats div {
+    padding: 16px;
+
+    border-radius: 13px;
+
+    background: #f2f8f5;
+
+    border: 1px solid #e0ebe7;
+}
+
+.stats strong {
+    display: block;
+
+    color: #14786e;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+}
+
+.stats span {
+    display: block;
+
+    color: #788b86;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   TESTS
+========================================= */
+
+.tests {
+    padding: 100px 0;
+
+    background: #f2f9f6;
+}
+
+.heading {
+    max-width: 700px;
+
+    margin-bottom: 45px;
+}
+
+.heading p {
+    color: #71837f;
+
+    font-size: 12px;
+}
+
+.test-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.test-card {
+    position: relative;
+
+    padding: 30px 22px;
+
+    border-radius: 20px;
+
+    background: white;
+
+    border: 1px solid #dfebe6;
+
+    transition: .3s;
+}
+
+.test-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 40px rgba(12,76,67,.10);
+}
+
+.number {
+    position: absolute;
+
+    right: 18px;
+    top: 15px;
+
+    color: #c3d1cd;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.test-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    background: #def2e8;
+
+    font-size: 23px;
+}
+
+.test-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+
+    margin-bottom: 9px;
+}
+
+.test-card p {
+    color: #71837f;
+
+    font-size: 9px;
+
+    margin-bottom: 20px;
+}
+
+.tag {
+    display: inline-block;
+
+    padding: 6px 9px;
+
+    border-radius: 20px;
+
+    background: #e9f6ef;
+
+    color: #14786e;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   SYMPTOMS
+========================================= */
+
+.symptoms {
+    padding: 100px 0;
+
+    background: white;
+}
+
+.symptoms-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.symptom-content > p {
+    color: #71837f;
+
+    font-size: 12px;
+
+    margin-bottom: 28px;
+}
+
+.symptom-list {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.symptom-list div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.symptom-list span {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #def2e8;
+
+    color: #14786e;
+
+    font-size: 10px;
+
+    flex-shrink: 0;
+}
+
+.symptom-list p {
+    color: #5f7771;
+
+    font-size: 9px;
+}
+
+.symptom-image {
+    height: 520px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+}
+
+.symptom-image img {
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.image-caption {
+    position: absolute;
+
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    color: white;
+
+    background: rgba(3,64,59,.88);
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.image-caption strong {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 19px;
+}
+
+.image-caption span {
+    color: #c4ded8;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   PREPARATION
+========================================= */
+
+.preparation {
+    padding: 100px 0;
+
+    background: #f2f9f6;
+}
+
+.center {
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.prep-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.prep-card {
+    padding: 28px 20px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 20px;
+
+    border: 1px solid #dfeae6;
+
+    transition: .3s;
+}
+
+.prep-card:hover {
+    transform: translateY(-5px);
+}
+
+.prep-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: auto auto 15px;
+
+    border-radius: 15px;
+
+    background: #def2e8;
+
+    font-size: 22px;
+}
+
+.prep-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+    margin-bottom: 7px;
+}
+
+.prep-card p {
+    color: #71837f;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   WHY
+========================================= */
+
+.why {
+    padding: 100px 0;
+
+    background: white;
+}
+
+.why-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.why-image {
+    height: 540px;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+}
+
+.why-image img {
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.why-content > p {
+    color: #71837f;
+
+    font-size: 12px;
+
+    margin-bottom: 28px;
+}
+
+.why-list {
+    display: grid;
+
+    gap: 18px;
+}
+
+.why-item {
+    display: flex;
+
+    gap: 15px;
+}
+
+.why-item > span {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #def2e8;
+
+    color: #14786e;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.why-item h3 {
+    font-size: 11px;
+
+    margin-bottom: 3px;
+}
+
+.why-item p {
+    color: #71837f;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   APPOINTMENT
+========================================= */
+
+.appointment {
+    padding: 100px 0;
+
+    background: #07574f;
+
+    color: white;
+}
+
+.appointment-grid {
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.appointment-info .eyebrow {
+    color: #b7e9d2;
+}
+
+.appointment-info h2 {
+    color: white;
+}
+
+.appointment-info h2 strong {
+    color: #b9ead5;
+}
+
+.appointment-info > p {
+    color: #c7ded9;
+
+    font-size: 13px;
+}
+
+.contact {
+    margin-top: 25px;
+}
+
+.contact p {
+    color: #c8dfd9;
+
+    font-size: 10px;
+
+    margin: 9px 0;
+}
+
+.form {
+    padding: 32px;
+
+    background: white;
+
+    color: #173e3a;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.12);
+}
+
+.form h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+    margin-bottom: 20px;
+}
+
+.form input,
+.form select,
+.form textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #dce8e4;
+
+    border-radius: 8px;
+
+    background: #fafcfb;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 10px;
+}
+
+.form textarea {
+    resize: vertical;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+    border-color: #14786e;
+
+    box-shadow:
+        0 0 0 3px rgba(20,120,110,.08);
+}
+
+.form button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #14786e;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.form small {
+    display: block;
+
+    text-align: center;
+
+    color: #82938f;
+
+    font-size: 8px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   LOCATION
+========================================= */
+
+.location {
+    padding: 100px 0;
+
+    background: white;
+}
+
+.location-box {
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    gap: 60px;
+
+    padding: 55px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #e8f6ef,
+            #f5fbf8
+        );
+
+    border: 1px solid #dcebe5;
+}
+
+.location-box p {
+    color: #71837f;
+
+    font-size: 11px;
+
+    max-width: 500px;
+
+    margin-bottom: 20px;
+}
+
+.map-btn {
+    display: inline-block;
+
+    padding: 12px 19px;
+
+    border-radius: 30px;
+
+    background: #14786e;
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.hours {
+    padding: 25px;
+
+    border-radius: 17px;
+
+    background: rgba(255,255,255,.72);
+
+    border: 1px solid #dcebe5;
+}
+
+.hours h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+
+    margin-bottom: 18px;
+}
+
+.hours div {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #e2ebe8;
+
+    color: #71837f;
+
+    font-size: 9px;
+}
+
+.hours strong {
+    color: #14786e;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding-top: 45px;
+
+    background: #043e3a;
+
+    color: white;
+}
+
+.footer-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding-bottom: 35px;
+}
+
+.footer-top h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+}
+
+.footer-top p {
+    color: #aec8c2;
+
+    font-size: 9px;
+
+    margin-top: 5px;
+}
+
+.footer-bottom {
+    padding: 18px 0;
+
+    border-top: 1px solid rgba(255,255,255,.1);
+
+    color: #829e98;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   WHATSAPP
+========================================= */
+
+.whatsapp {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #25d366;
+
+    color: white;
+
+    font-size: 23px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.20);
+
+    z-index: 999;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .intro-grid,
+    .symptoms-grid,
+    .why-grid,
+    .appointment-grid,
+    .location-box {
+        grid-template-columns: 1fr;
+    }
+
+    .test-grid,
+    .prep-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        font-size: 47px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons a {
+        text-align: center;
+    }
+
+    .intro,
+    .tests,
+    .symptoms,
+    .preparation,
+    .why,
+    .appointment,
+    .location {
+        padding: 70px 0;
+    }
+
+    .image-box,
+    .symptom-image,
+    .why-image {
+        height: 390px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .test-grid,
+    .prep-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .symptom-list {
+        grid-template-columns: 1fr;
+    }
+
+    .location-box {
+        padding: 28px;
+
+        gap: 30px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .whatsapp {
+        width: 48px;
+        height: 48px;
+
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 41px;
+    }
+
+    .content h2,
+    .heading h2,
+    .symptom-content h2,
+    .why-content h2,
+    .appointment-info h2,
+    .location-box h2 {
+        font-size: 35px;
+    }
+
+}
+    </style>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="clinic-name">
+                SRI SPECTRA DIAGNOSTICS
+            </span>
+
+            <span class="badge">
+                ✦ THYROID TEST
+            </span>
+
+            <h1>
+                Understand your
+                <span>thyroid health.</span>
+            </h1>
+
+            <p>
+                Reliable thyroid testing with accurate laboratory
+                analysis to help your doctor understand thyroid
+                function and guide appropriate care.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#appointment" class="primary-btn">
+                    Book Thyroid Test →
+                </a>
+
+                <a href="tel:9986677662" class="secondary-btn">
+                    📞 Call Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro">
+
+    <div class="container intro-grid">
+
+        <div class="image-box">
+
+            <img
+                src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1200&q=85"
+                alt="Thyroid laboratory testing">
+
+            <div class="glass-card">
+
+                <div class="icon">
+                    🧪
+                </div>
+
+                <div>
+                    <strong>Thyroid Testing</strong>
+                    <small>Laboratory diagnostic service</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="content">
+
+            <span class="eyebrow">
+                THYROID HEALTH
+            </span>
+
+            <h2>
+                Check your thyroid.
+                <strong>Know your health.</strong>
+            </h2>
+
+            <p>
+                Thyroid tests are blood tests used to assess how
+                well the thyroid gland is functioning. Your doctor
+                may recommend thyroid testing when you have
+                symptoms or as part of a health evaluation.
+            </p>
+
+            <p>
+                At Sri Spectra Diagnostics, samples are collected
+                carefully and processed using laboratory
+                procedures designed to provide dependable results.
+            </p>
+
+            <div class="stats">
+
+                <div>
+                    <strong>01</strong>
+                    <span>Sample Collection</span>
+                </div>
+
+                <div>
+                    <strong>02</strong>
+                    <span>Laboratory Analysis</span>
+                </div>
+
+                <div>
+                    <strong>03</strong>
+                    <span>Report</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TESTS ================= -->
+
+<section class="tests">
+
+    <div class="container">
+
+        <div class="heading">
+
+            <span class="eyebrow">
+                THYROID PANEL
+            </span>
+
+            <h2>
+                Tests that help assess
+                <strong>thyroid function.</strong>
+            </h2>
+
+            <p>
+                Your doctor may recommend one or more thyroid
+                tests depending on your symptoms and medical needs.
+            </p>
+
+        </div>
+
+
+        <div class="test-grid">
+
+            <div class="test-card">
+
+                <span class="number">01</span>
+
+                <div class="test-icon">
+                    🔬
+                </div>
+
+                <h3>TSH Test</h3>
+
+                <p>
+                    Measures thyroid-stimulating hormone and is
+                    commonly used as an initial assessment of
+                    thyroid function.
+                </p>
+
+                <span class="tag">
+                    THYROID FUNCTION
+                </span>
+
+            </div>
+
+
+            <div class="test-card">
+
+                <span class="number">02</span>
+
+                <div class="test-icon">
+                    🧬
+                </div>
+
+                <h3>Free T3</h3>
+
+                <p>
+                    Measures the free form of triiodothyronine,
+                    a thyroid hormone involved in regulating
+                    metabolism.
+                </p>
+
+                <span class="tag">
+                    HORMONE TEST
+                </span>
+
+            </div>
+
+
+            <div class="test-card">
+
+                <span class="number">03</span>
+
+                <div class="test-icon">
+                    🧬
+                </div>
+
+                <h3>Free T4</h3>
+
+                <p>
+                    Measures free thyroxine levels and may be
+                    used alongside TSH to evaluate thyroid
+                    function.
+                </p>
+
+                <span class="tag">
+                    HORMONE TEST
+                </span>
+
+            </div>
+
+
+            <div class="test-card">
+
+                <span class="number">04</span>
+
+                <div class="test-icon">
+                    🩸
+                </div>
+
+                <h3>Thyroid Profile</h3>
+
+                <p>
+                    A combination of thyroid hormone tests that
+                    may be recommended by a healthcare
+                    professional.
+                </p>
+
+                <span class="tag">
+                    THYROID PANEL
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SYMPTOMS ================= -->
+
+<section class="symptoms">
+
+    <div class="container symptoms-grid">
+
+        <div class="symptom-content">
+
+            <span class="eyebrow">
+                WHEN TESTING MAY BE CONSIDERED
+            </span>
+
+            <h2>
+                Listen to what
+                <strong>your body tells you.</strong>
+            </h2>
+
+            <p>
+                Thyroid problems can sometimes cause changes
+                in the way you feel. A healthcare professional
+                can determine whether testing is appropriate.
+            </p>
+
+            <div class="symptom-list">
+
+                <div>
+                    <span>✓</span>
+                    <p>Unexplained changes in weight</p>
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    <p>Unusual tiredness or fatigue</p>
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    <p>Changes in heart rate</p>
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    <p>Changes in mood or energy</p>
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    <p>Changes in sensitivity to temperature</p>
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    <p>Other symptoms requiring medical evaluation</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="symptom-image">
+
+            <img
+                src="img0.jpg"
+                alt="Medical laboratory professional">
+
+            <div class="image-caption">
+
+                <strong>
+                    Professional Laboratory Care
+                </strong>
+
+                <span>
+                    Careful sample handling & testing
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PREPARATION ================= -->
+
+<section class="preparation">
+
+    <div class="container">
+
+        <div class="heading center">
+
+            <span class="eyebrow">
+                BEFORE YOUR TEST
+            </span>
+
+            <h2>
+                Simple preparation.
+                <strong>Easy testing.</strong>
+            </h2>
+
+        </div>
+
+
+        <div class="prep-grid">
+
+            <div class="prep-card">
+
+                <div class="prep-icon">
+                    📋
+                </div>
+
+                <h3>
+                    Follow Instructions
+                </h3>
+
+                <p>
+                    Follow any preparation instructions provided
+                    by your doctor or laboratory.
+                </p>
+
+            </div>
+
+
+            <div class="prep-card">
+
+                <div class="prep-icon">
+                    💊
+                </div>
+
+                <h3>
+                    Inform About Medicines
+                </h3>
+
+                <p>
+                    Inform your healthcare professional about
+                    medicines or supplements you are taking.
+                </p>
+
+            </div>
+
+
+            <div class="prep-card">
+
+                <div class="prep-icon">
+                    💧
+                </div>
+
+                <h3>
+                    Stay Hydrated
+                </h3>
+
+                <p>
+                    Unless otherwise instructed, maintaining
+                    normal hydration can make blood collection
+                    more comfortable.
+                </p>
+
+            </div>
+
+
+            <div class="prep-card">
+
+                <div class="prep-icon">
+                    🩸
+                </div>
+
+                <h3>
+                    Quick Sample Collection
+                </h3>
+
+                <p>
+                    A small blood sample is collected for
+                    laboratory analysis.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY US ================= -->
+
+<section class="why">
+
+    <div class="container why-grid">
+
+        <div class="why-image">
+
+            <img
+                src="img5.jpg"
+                alt="Diagnostic laboratory">
+
+        </div>
+
+
+        <div class="why-content">
+
+            <span class="eyebrow">
+                WHY SRI SPECTRA
+            </span>
+
+            <h2>
+                Diagnostic care you can
+                <strong>feel confident about.</strong>
+            </h2>
+
+            <p>
+                We focus on accurate testing, careful sample
+                handling and a patient-friendly experience.
+            </p>
+
+
+            <div class="why-list">
+
+                <div class="why-item">
+
+                    <span>01</span>
+
+                    <div>
+                        <h3>Reliable Testing</h3>
+                        <p>
+                            Laboratory testing performed with
+                            established procedures.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <span>02</span>
+
+                    <div>
+                        <h3>Experienced Team</h3>
+                        <p>
+                            Friendly professionals to assist
+                            you throughout the process.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <span>03</span>
+
+                    <div>
+                        <h3>Convenient Location</h3>
+                        <p>
+                            Easily accessible in Akshaya Nagar,
+                            Bangalore.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <span>04</span>
+
+                    <div>
+                        <h3>Patient First</h3>
+                        <p>
+                            Comfortable and simple diagnostic
+                            experience.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= APPOINTMENT ================= -->
+
+<section class="appointment" id="appointment">
+
+    <div class="container appointment-grid">
+
+        <div class="appointment-info">
+
+            <span class="eyebrow">
+                BOOK YOUR TEST
+            </span>
+
+            <h2>
+                Take the next step
+                <strong>for your health.</strong>
+            </h2>
+
+            <p>
+                Book your thyroid test at Sri Spectra Diagnostics
+                in Akshaya Nagar, Bangalore.
+            </p>
+
+            <div class="contact">
+
+                <p>📞 99866 77662</p>
+
+                <p>📞 99866 77663</p>
+
+                <p>📍 Akshaya Nagar, Bangalore</p>
+
+            </div>
+
+        </div>
+
+
+        <form class="form">
+
+            <h3>
+                Book Thyroid Test
+            </h3>
+
+            <input
+                type="text"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="tel"
+                placeholder="Mobile Number"
+                required>
+
+            <label for="testService">Test / Service</label>
+
+<select id="testService" name="testService" required>
+    <option value="">Select service</option>
+    <option>Blood Test</option>
+    <option>Thyroid Test</option>
+    <option>Diabetes Test</option>
+    <option>Health Checkup</option>
+    <option>Home Collection</option>
+</select>
+
+            <label for="preferredDate">
+    Preferred Date
+</label>
+
+<input
+    type="date"
+    id="preferredDate"
+    name="preferredDate"
+    required>
+
+            <textarea
+                rows="4"
+                placeholder="Any additional information">
+            </textarea>
+
+            <button type="submit">
+                Request Appointment →
+            </button>
+
+            <small>
+                Our team will contact you to confirm your
+                appointment.
+            </small>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LOCATION ================= -->
+
+<section class="location">
+
+    <div class="container location-box">
+
+        <div>
+
+            <span class="eyebrow">
+                VISIT US
+            </span>
+
+            <h2>
+                Sri Spectra
+                <strong>Diagnostics</strong>
+            </h2>
+
+            <p>
+                Ganapathi Complex, 2nd Main,
+                Akshaya Nagar, 50 Ft Road,
+                Near DLF Town, Yelenahalli,
+                Bangalore – 560068
+            </p>
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Sri+Spectra+Diagnostics+Akshaya+Nagar+Bangalore"
+                target="_blank"
+                 rel="noopener noreferrer"
+                class="map-btn">
+
+                Open Google Maps →
+
+            </a>
+
+        </div>
+
+
+        <div class="hours">
+
+            <h3>
+                Opening Hours
+            </h3>
+
+            <div>
+                <span>Monday – Saturday</span>
+                <strong>7 AM – 10 PM</strong>
+            </div>
+
+            <div>
+                <span>Sunday</span>
+                <strong>7 AM – 2 PM</strong>
+            </div>
+
+            <div>
+                <span>Sunday Evening</span>
+                <strong>5 PM – 10 PM</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div>
+
+                <h3>
+                    Sri Spectra
+                </h3>
+
+                <p>
+                    Diagnostics & Clinic
+                </p>
+
+            </div>
+
+            <div>
+
+                <p>
+                    Akshaya Nagar, Bangalore
+                </p>
+
+                <p>
+                    99866 77662 | 99866 77663
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © 2026 Sri Spectra Diagnostics & Clinic.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+    href="https://wa.me/919986677662"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp">
+
+    💬
+
+</a>
+
+</body>
+</html>
