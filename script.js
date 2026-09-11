@@ -3,7 +3,6 @@
 ===================================================== */
 
 const menuButton = document.getElementById("menuButton");
-const mobileNav = document.getElementById("mobileNav");
 
 menuButton.addEventListener("click", () => {
 
@@ -80,5 +79,50 @@ appointmentForm.addEventListener("submit", function (event) {
     );
 
     appointmentForm.reset();
+
+});
+// =========================================
+// MOBILE MENU
+// =========================================
+
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const mobileNav = document.getElementById("mobileNav");
+
+mobileMenuBtn.addEventListener("click", function () {
+
+    mobileMenuBtn.classList.toggle("active");
+    mobileNav.classList.toggle("active");
+
+});
+
+
+// Close menu when clicking a link
+
+
+mobileLinks.forEach(link => {
+
+    link.addEventListener("click", function () {
+
+        mobileMenuBtn.classList.remove("active");
+        mobileNav.classList.remove("active");
+
+    });
+
+});
+
+
+// Close menu when clicking outside
+
+document.addEventListener("click", function (event) {
+
+    if (
+        !mobileNav.contains(event.target) &&
+        !mobileMenuBtn.contains(event.target)
+    ) {
+
+        mobileMenuBtn.classList.remove("active");
+        mobileNav.classList.remove("active");
+
+    }
 
 });
