@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Sri Spectra Diagnostics & Clinic</title>
+
+    <link rel="stylesheet" href="about.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <style>
+        /* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f4fbf8;
+    color: #196453;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Manrope", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    background: rgba(5, 91, 68, 0.92);
+    -webkit-backdrop-filter: blur(15px);
+backdrop-filter: blur(15px);
+
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.nav-container {
+    max-width: 1250px;
+    margin: auto;
+    min-height: 78px;
+
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 14px;
+
+    font-size: 21px;
+}
+
+.logo h2 {
+    font-size: 20px;
+}
+
+.logo span {
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+.desktop-nav {
+    display: flex;
+    gap: 28px;
+    margin-left: auto;
+}
+
+.desktop-nav a {
+    color: rgba(255,255,255,0.85);
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.active {
+    color: white;
+}
+
+.nav-btn {
+    padding: 12px 20px;
+
+    background: white;
+    color: #226e59;
+
+    border-radius: 12px;
+
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobile-menu-btn {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.15);
+
+    cursor: pointer;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.mobile-menu-btn span {
+    width: 22px;
+    height: 2px;
+
+    background: white;
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.about-hero {
+    min-height: 650px;
+
+    padding: 90px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+
+    background:
+        radial-gradient(circle at 10% 20%, rgba(48, 193, 142, 0.35), transparent 30%),
+        linear-gradient(135deg, #047453, #0b9470 55%, #073f34);
+
+    color: white;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.07);
+
+    right: -100px;
+    top: -150px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 9px 15px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.hero-content h1 {
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.05;
+
+    max-width: 700px;
+
+    margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+    color: #9ff5d4;
+}
+
+.hero-content p {
+    max-width: 600px;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: rgba(255,255,255,0.82);
+
+    margin-bottom: 32px;
+}
+
+.hero-buttons,
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px 22px;
+
+    border-radius: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: white;
+    color: #184e3e;
+}
+
+.secondary-btn {
+    color: white;
+    border: 1px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.1);
+    -webkit-backdrop-filter: blur(15px);
+backdrop-filter: blur(15px);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+    position: relative;
+}
+
+.image-glass {
+    padding: 12px;
+
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+
+    -webkit-backdrop-filter: blur(15px);
+backdrop-filter: blur(15px);
+
+    border-radius: 30px;
+
+    box-shadow: 0 30px 80px rgba(0,0,0,0.18);
+
+    position: relative;
+}
+
+.image-glass img {
+    height: 430px;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+.floating-card {
+    position: absolute;
+
+    left: -30px;
+    bottom: 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 20px;
+
+    background: rgba(255,255,255,0.9);
+    color: #17473c;
+
+    border-radius: 18px;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+
+    -webkit-backdrop-filter: blur(15px);
+backdrop-filter: blur(15px);
+}
+
+.floating-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #dff8ed;
+    color: #087453;
+}
+
+.floating-card strong,
+.floating-card small {
+    display: block;
+}
+
+.floating-card small {
+    color: #67827a;
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   COMMON SECTIONS
+========================================= */
+
+.story-section,
+.promise-section,
+.doctors-section,
+.quality-section {
+    padding: 100px 7%;
+}
+
+.section-container,
+.quality-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-label {
+    color: #07815f;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    margin: 12px 0 15px;
+}
+
+.section-heading h2 span,
+.story-content h2 span,
+.quality-content h2 span,
+.about-cta h2 span {
+    color: #07815f;
+}
+
+.section-heading p {
+    color: #71857f;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   STORY
+========================================= */
+
+.story-section {
+    background: white;
+}
+
+.section-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.story-image {
+    position: relative;
+}
+
+.story-image img {
+    height: 520px;
+    object-fit: cover;
+
+    border-radius: 30px;
+
+    box-shadow: 0 25px 60px rgba(0,70,50,0.12);
+}
+
+.experience-card {
+    position: absolute;
+
+    right: -25px;
+    bottom: 35px;
+
+    background: rgba(255,255,255,0.92);
+
+    padding: 20px 25px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+
+    text-align: center;
+}
+
+.experience-card strong {
+    display: block;
+    font-size: 35px;
+    color: #087453;
+}
+
+.experience-card span {
+    font-size: 13px;
+    color: #657d76;
+}
+
+.story-content h2,
+.quality-content h2 {
+    font-size: clamp(32px, 4vw, 50px);
+    line-height: 1.15;
+    margin: 15px 0 25px;
+}
+
+.story-content p,
+.quality-content p {
+    color: #6b8179;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.story-points {
+    margin-top: 25px;
+    display: grid;
+    gap: 13px;
+}
+
+.story-points div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #305c50;
+    font-weight: 600;
+}
+
+.story-points i {
+    color: #0a9a6f;
+}
+
+
+/* =========================================
+   PROMISE
+========================================= */
+
+.promise-section {
+    background:
+        linear-gradient(135deg, #eefaf6, #f9fffd);
+}
+
+.promise-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.promise-card {
+    padding: 30px;
+
+    border-radius: 24px;
+
+    background: rgba(255,255,255,0.65);
+    border: 1px solid rgba(10,130,95,0.1);
+
+    -webkit-backdrop-filter: blur(15px);
+backdrop-filter: blur(15px);
+
+    transition: 0.3s;
+}
+
+.promise-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 45px rgba(0,100,70,0.12);
+}
+
+.promise-icon {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #dff7ec;
+    color: #087453;
+
+    font-size: 22px;
+
+    margin-bottom: 22px;
+}
+
+.promise-card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.promise-card p {
+    color: #71837e;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   DOCTORS
+========================================= */
+
+.doctors-section {
+    background: white;
+}
+
+.doctors-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.doctor-card {
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background: white;
+
+    border: 1px solid #e0eee9;
+
+    box-shadow: 0 12px 35px rgba(230, 242, 239, 0.06);
+
+    transition: 0.4s;
+}
+
+.doctor-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 25px 60px rgba(0,80,60,0.14);
+}
+
+.doctor-image {
+    height: 330px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #dff3ec;
+}
+
+.doctor-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.doctor-card:hover .doctor-image img {
+    transform: scale(1.05);
+}
+
+.doctor-speciality {
+    position: absolute;
+
+    left: 15px;
+    bottom: 15px;
+
+    padding: 8px 12px;
+
+    background: rgba(255,255,255,0.9);
+
+    border-radius: 20px;
+
+    color: #087453;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    -webkit-backdrop-filter: blur(15px);
+backdrop-filter: blur(15px);
+}
+
+.doctor-info {
+    padding: 25px;
+
+    position: relative;
+}
+
+.doctor-number {
+    position: absolute;
+
+    right: 22px;
+    top: 22px;
+
+    color: #a9c8be;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.doctor-info h3 {
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+.doctor-info p {
+    color: #73877f;
+    font-size: 14px;
+}
+
+.doctor-info .qualification {
+    color: #07815f;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   QUALITY
+========================================= */
+
+.quality-section {
+    background: #effaf6;
+}
+
+.quality-container {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.quality-card {
+    padding: 45px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(145deg, #087a59, #04533f);
+
+    color: white;
+
+    box-shadow: 0 25px 60px rgba(0,70,50,0.18);
+}
+
+.quality-logo {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.13);
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+.quality-card h3 {
+    font-size: 40px;
+}
+
+.quality-card p {
+    color: rgba(255,255,255,0.75);
+}
+
+.quality-line {
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    margin: 25px 0;
+}
+
+.quality-items {
+    display: grid;
+    gap: 14px;
+}
+
+.quality-items div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: rgba(255,255,255,0.9);
+}
+
+.quality-items i {
+    color: #9ff5d4;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.about-cta {
+    padding: 100px 7%;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 50% 0%, rgba(65,218,165,0.25), transparent 35%),
+        #075f47;
+
+    color: white;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-cta .section-label {
+    color: #9ff5d4;
+}
+
+.about-cta h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    margin: 15px 0;
+}
+
+.about-cta h2 span {
+    color: #9ff5d4;
+}
+
+.about-cta p {
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    justify-content: center;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #063e32;
+    color: white;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 70px 25px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr;
+    gap: 60px;
+}
+
+.footer-logo {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255,255,255,0.1);
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+}
+
+.footer-brand h3 {
+    font-size: 22px;
+}
+
+.footer-brand p {
+    color: rgba(255,255,255,0.6);
+}
+
+.footer-description {
+    margin-top: 15px;
+    max-width: 300px;
+    line-height: 1.7;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin-bottom: 8px;
+}
+
+.footer-links a,
+.footer-contact p {
+    color: rgba(255,255,255,0.65);
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-contact i {
+    width: 20px;
+    color: #7ce5c0;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    text-align: center;
+
+    padding: 20px;
+
+    color: rgba(255,255,255,0.5);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .desktop-nav {
+        gap: 15px;
+    }
+
+    .about-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        max-width: 650px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .promise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .doctors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        min-height: 70px;
+        padding: 0 16px;
+    }
+
+    .desktop-nav,
+    .nav-btn {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .mobile-nav {
+        display: flex;
+
+        position: absolute;
+
+        top: 75px;
+        left: 12px;
+        right: 12px;
+
+        padding: 12px;
+
+        flex-direction: column;
+        gap: 3px;
+
+        background: rgba(255,255,255,0.96);
+
+        border-radius: 20px;
+
+        box-shadow: 0 20px 50px rgba(0,60,45,0.2);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-15px);
+
+        transition: 0.3s;
+    }
+
+    .mobile-nav.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .mobile-nav a {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        padding: 14px;
+
+        color: #075c46;
+
+        border-radius: 12px;
+
+        font-weight: 600;
+    }
+
+    .mobile-nav a:hover {
+        background: #e9f8f2;
+    }
+
+    .mobile-nav i {
+        width: 28px;
+        height: 28px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #e3f7ee;
+
+        border-radius: 50%;
+
+        color: #087453;
+
+        font-size: 13px;
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+
+    .about-hero {
+        padding: 65px 20px;
+        min-height: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .image-glass img {
+        height: 330px;
+    }
+
+    .floating-card {
+        left: 10px;
+        bottom: 20px;
+    }
+
+
+    .story-section,
+    .promise-section,
+    .doctors-section,
+    .quality-section {
+        padding: 70px 20px;
+    }
+
+    .section-container,
+    .quality-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .story-image img {
+        height: 400px;
+    }
+
+    .experience-card {
+        right: 15px;
+    }
+
+
+    .promise-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .doctors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-image {
+        height: 360px;
+    }
+
+
+    .quality-card {
+        padding: 30px;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .logo h2 {
+        font-size: 17px;
+    }
+
+    .logo span {
+        font-size: 9px;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-buttons,
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .image-glass img {
+        height: 280px;
+    }
+
+    .floating-card {
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .doctor-image {
+        height: 330px;
+    }
+
+}
+    </style>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <div>
+                <h2>Sri Spectra</h2>
+                <span>Diagnostics & Clinic</span>
+            </div>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="service.html">Services</a>
+            <a href="package.html">Packages</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="index.html#booking" class="nav-btn">
+            Book a Test
+        </a>
+
+        <!-- Mobile Menu -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+    <!-- Mobile Navigation -->
+
+    <div class="mobile-nav" id="mobileNav">
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="about1.html">
+            <i class="fa-solid fa-circle-info"></i>
+            About
+        </a>
+
+        <a href="service.html">
+            <i class="fa-solid fa-stethoscope"></i>
+            Services
+        </a>
+
+        <a href="package.html">
+            <i class="fa-solid fa-box-open"></i>
+            Health Packages
+        </a>
+
+        <a href="in">
+            <i class="fa-solid fa-calendar-check"></i>
+            Book Appointment
+        </a>
+
+        <a href="contact.html">
+            <i class="fa-solid fa-phone"></i>
+            Contact
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="about-hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            <i class="fa-solid fa-calendar-check"></i>
+            Trusted Since 2014
+        </div>
+
+        <h1>
+            Healthcare Built on
+            <span>Trust & Accuracy</span>
+        </h1>
+
+        <p>
+            Sri Spectra Diagnostics & Clinic has been serving families
+            in Akshaya Nagar and surrounding areas with reliable
+            diagnostic and healthcare services.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="index.html#booking" class="primary-btn">
+                Book a Test
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="tel:9986677662" class="secondary-btn">
+                <i class="fa-solid fa-phone"></i>
+                99866 77662
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <div class="image-glass">
+            <img src="img0.jpg"
+                 alt="Sri Spectra Diagnostics Team">
+
+            <div class="floating-card">
+
+                <div class="floating-icon">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+
+                <div>
+                    <strong>NABL Accredited</strong>
+                    <small>Quality you can trust</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="story-section">
+
+    <div class="section-container">
+
+        <div class="story-image">
+
+            <img src="img5.jpg"
+                 alt="Sri Spectra Diagnostics Clinic">
+
+            <div class="experience-card">
+
+                <strong>10+</strong>
+                <span>Years of Trust</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="story-content">
+
+            <span class="section-label">
+                OUR STORY
+            </span>
+
+            <h2>
+                A neighbourhood lab,
+                <span>grown with you.</span>
+            </h2>
+
+            <p>
+                Sri Spectra Diagnostics and Clinic has been part of
+                the Akshaya Nagar community since 2014. What started
+                as a neighbourhood laboratory has grown into a
+                comprehensive diagnostic centre.
+            </p>
+
+            <p>
+                Today, we bring pathology, ultrasound, digital
+                X-ray, ECG, health checkups and doctor consultations
+                together under one roof.
+            </p>
+
+            <p>
+                Our approach is simple — provide dependable
+                diagnostics, reduce waiting time and make healthcare
+                convenient for families close to home.
+            </p>
+
+            <div class="story-points">
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Quality-focused diagnostics
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Experienced healthcare professionals
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Convenient home sample collection
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROMISE ================= -->
+
+<section class="promise-section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            OUR PROMISE
+        </span>
+
+        <h2>
+            Care you can <span>count on.</span>
+        </h2>
+
+        <p>
+            Every test, report and consultation is handled
+            with accuracy, care and responsibility.
+        </p>
+
+    </div>
+
+
+    <div class="promise-grid">
+
+        <div class="promise-card">
+
+            <div class="promise-icon">
+                <i class="fa-solid fa-microscope"></i>
+            </div>
+
+            <h3>Accuracy You Can Act On</h3>
+
+            <p>
+                Quality-focused diagnostic processes help ensure
+                dependable results you can discuss with your doctor.
+            </p>
+
+        </div>
+
+
+        <div class="promise-card">
+
+            <div class="promise-icon">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <h3>Speed When It Matters</h3>
+
+            <p>
+                Most reports are designed to be available quickly,
+                helping you move forward with your healthcare decisions.
+            </p>
+
+        </div>
+
+
+        <div class="promise-card">
+
+            <div class="promise-icon">
+                <i class="fa-solid fa-user-doctor"></i>
+            </div>
+
+            <h3>Care, Not Just Service</h3>
+
+            <p>
+                Our team believes every patient deserves personal
+                attention and clear communication.
+            </p>
+
+        </div>
+
+
+        <div class="promise-card">
+
+            <div class="promise-icon">
+                <i class="fa-solid fa-house-medical"></i>
+            </div>
+
+            <h3>Healthcare at Your Door</h3>
+
+            <p>
+                Home sample collection makes diagnostic care more
+                convenient for families around the local area.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DOCTORS ================= -->
+
+<section class="doctors-section" id="doctors">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            MEET THE TEAM
+        </span>
+
+        <h2>
+            Our <span>Doctors</span>
+        </h2>
+
+        <p>
+            Experienced physicians and specialists who help
+            review reports and guide patients toward the
+            right healthcare decisions.
+        </p>
+
+    </div>
+
+
+    <div class="doctors-grid">
+
+
+        <!-- Doctor 1 -->
+
+        <div class="doctor-card">
+
+            <div class="doctor-image">
+
+                <img src="dr-kumarswamy-e.jpg"
+                     alt="Dr. Kumarswamy E">
+
+                <div class="doctor-speciality">
+                    General Physician
+                </div>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <span class="doctor-number">
+                    01
+                </span>
+
+                <h3>
+                    Dr. Kumarswamy E
+                </h3>
+
+                <p class="qualification">
+                    MBBS, MD
+                </p>
+
+                <p>
+                    General Physician
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Doctor 2 -->
+
+        <div class="doctor-card">
+
+            <div class="doctor-image">
+
+                <img src="dr-manohar.jpg"
+                     alt="Dr. Manohar">
+
+                <div class="doctor-speciality">
+                    Orthopaedic Surgeon
+                </div>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <span class="doctor-number">
+                    02
+                </span>
+
+                <h3>
+                    Dr. Manohar
+                </h3>
+
+                <p class="qualification">
+                    MBBS, DNB (Ortho)
+                </p>
+
+                <p>
+                    Orthopaedic Surgeon
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Doctor 3 -->
+
+        <div class="doctor-card">
+
+            <div class="doctor-image">
+
+                <img src="dr-p-k-jaiswal.jpg"
+                     alt="Dr. P. K. Jaiswal">
+
+                <div class="doctor-speciality">
+                    General Physician
+                </div>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <span class="doctor-number">
+                    03
+                </span>
+
+                <h3>
+                    Dr. P. K. Jaiswal
+                </h3>
+
+                <p class="qualification">
+                    MBBS, DHM
+                </p>
+
+                <p>
+                    General Physician
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Doctor 4 -->
+
+        <div class="doctor-card">
+
+            <div class="doctor-image">
+
+                <img src="dr-sumangala-math.jpg"
+                     alt="Dr. Sumangala Math">
+
+                <div class="doctor-speciality">
+                    Gynaecology
+                </div>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <span class="doctor-number">
+                    04
+                </span>
+
+                <h3>
+                    Dr. Sumangala Math
+                </h3>
+
+                <p class="qualification">
+                    MBBS, MS
+                </p>
+
+                <p>
+                    Gynaecology
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Doctor 5 -->
+
+        <div class="doctor-card">
+
+            <div class="doctor-image">
+
+                <img src="dr-shehenaz.jpg"
+                     alt="Dr. Shehenaz">
+
+                <div class="doctor-speciality">
+                    Physiotherapist
+                </div>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <span class="doctor-number">
+                    05
+                </span>
+
+                <h3>
+                    Dr. Shehenaz
+                </h3>
+
+                <p class="qualification">
+                    BPT, MPT
+                </p>
+
+                <p>
+                    Physiotherapist
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Doctor 6 -->
+
+        <div class="doctor-card">
+
+            <div class="doctor-image">
+
+                <img src="dr-sheetal.jpg"
+                     alt="Dr. Sheetal">
+
+                <div class="doctor-speciality">
+                    Pediatrician
+                </div>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <span class="doctor-number">
+                    06
+                </span>
+
+                <h3>
+                    Dr. Sheetal
+                </h3>
+
+                <p class="qualification">
+                    MBBS, DCH
+                </p>
+
+                <p>
+                    Pediatrician
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUALITY ================= -->
+
+<section class="quality-section">
+
+    <div class="quality-container">
+
+        <div class="quality-content">
+
+            <span class="section-label">
+                QUALITY & ACCREDITATION
+            </span>
+
+            <h2>
+                NABL-accredited,
+                <span>end to end.</span>
+            </h2>
+
+            <p>
+                Quality is at the heart of every diagnostic service
+                we provide. Our processes follow quality and
+                competence standards associated with NABL accreditation.
+            </p>
+
+            <p>
+                From sample collection through processing and
+                reporting, our aim is to provide results that
+                patients and healthcare professionals can rely on.
+            </p>
+
+            <a href="index.html#contact" class="primary-btn">
+                Talk to Us
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="quality-card">
+
+            <div class="quality-logo">
+                <i class="fa-solid fa-award"></i>
+            </div>
+
+            <h3>
+                NABL
+            </h3>
+
+            <p>
+                Accredited Diagnostic Centre
+            </p>
+
+            <div class="quality-line"></div>
+
+            <div class="quality-items">
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Quality processes
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Documented workflows
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Quality checked testing
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="about-cta">
+
+    <div class="cta-content">
+
+        <span class="section-label">
+            WE'RE HERE TO HELP
+        </span>
+
+        <h2>
+            Have a question about
+            <span>your healthcare?</span>
+        </h2>
+
+        <p>
+            Book a test, request home collection or
+            speak with our team.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="index.html#booking" class="primary-btn">
+                Book a Test
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="tel:9986677662" class="secondary-btn">
+                <i class="fa-solid fa-phone"></i>
+                Call 99866 77662
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <h3>Sri Spectra</h3>
+
+            <p>
+                Diagnostics & Clinic
+            </p>
+
+            <p class="footer-description">
+                NABL-accredited diagnostic centre serving
+                Akshaya Nagar and surrounding areas.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>Quick Links</h4>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#packages">Packages</a>
+            <a href="index.html#contact">Contact</a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h4>Contact</h4>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Akshaya Nagar, Bangalore
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                99866 77662
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                srispectra@gmail.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Sri Spectra Diagnostics & Clinic.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+const menuBtn = document.getElementById("mobileMenuBtn");
+const mobileNav = document.getElementById("mobileNav");
+
+menuBtn.addEventListener("click", () => {
+
+    menuBtn.classList.toggle("active");
+    mobileNav.classList.toggle("active");
+
+});
+
+document.querySelectorAll(".mobile-nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        menuBtn.classList.remove("active");
+        mobileNav.classList.remove("active");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

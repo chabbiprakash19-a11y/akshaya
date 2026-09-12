@@ -1,31 +1,32 @@
-/* =====================================================
-   MOBILE MENU
-===================================================== */
+// ================================
+// MOBILE MENU
+// ================================
 
-const menuButton = document.getElementById("menuButton");
+const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+const mobileNav = document.querySelector(".mobile-nav");
 
-menuButton.addEventListener("click", () => {
+if (mobileMenuBtn && mobileNav) {
 
-    mobileNav.classList.toggle("active");
+    mobileMenuBtn.addEventListener("click", function () {
 
-});
+        // Open / close mobile menu
+        mobileNav.classList.toggle("active");
 
-
-/* Close mobile menu when a link is clicked */
-
-const mobileLinks =
-    document.querySelectorAll(".mobile-nav a");
-
-mobileLinks.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        mobileNav.classList.remove("active");
+        // Animate hamburger
+        mobileMenuBtn.classList.toggle("active");
 
     });
 
-});
+    // Close menu when a link is clicked
+    const mobileLinks = mobileNav.querySelectorAll("a");
 
+    mobileLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+            mobileNav.classList.remove("active");
+            mobileMenuBtn.classList.remove("active");
+        });
+    });
+}
 
 /* =====================================================
    TEST SEARCH
@@ -79,50 +80,5 @@ appointmentForm.addEventListener("submit", function (event) {
     );
 
     appointmentForm.reset();
-
-});
-// =========================================
-// MOBILE MENU
-// =========================================
-
-const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-const mobileNav = document.getElementById("mobileNav");
-
-mobileMenuBtn.addEventListener("click", function () {
-
-    mobileMenuBtn.classList.toggle("active");
-    mobileNav.classList.toggle("active");
-
-});
-
-
-// Close menu when clicking a link
-
-
-mobileLinks.forEach(link => {
-
-    link.addEventListener("click", function () {
-
-        mobileMenuBtn.classList.remove("active");
-        mobileNav.classList.remove("active");
-
-    });
-
-});
-
-
-// Close menu when clicking outside
-
-document.addEventListener("click", function (event) {
-
-    if (
-        !mobileNav.contains(event.target) &&
-        !mobileMenuBtn.contains(event.target)
-    ) {
-
-        mobileMenuBtn.classList.remove("active");
-        mobileNav.classList.remove("active");
-
-    }
 
 });
